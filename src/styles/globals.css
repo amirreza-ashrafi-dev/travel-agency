@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Monteserrat';
+    src: url('../fonts/montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Monteserrat2';
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'tradegothic';
+    src: url('../fonts/tradegothic/Trade\ Gothic\ LT.ttf');
+}
+
+@font-face {
+    font-family: 'tradegothic2';
+    src: url('../fonts/tradegothic/Trade\ Gothic\ LT\ Bold.ttf');
+}
