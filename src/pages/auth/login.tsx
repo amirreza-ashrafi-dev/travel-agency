@@ -1,19 +1,23 @@
-import { Grid, Container, Typography, Box, TextField, Checkbox, FormControlLabel, Divider } from '@mui/material';
+import { Grid, Container, Typography, Box, TextField, Checkbox, FormControlLabel, Divider, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import AirplanePic from '@/static-pictures/Rectangle 20.svg'
 import LogoPic from '@/static-pictures/logo.svg';
+import FacebookIcon from '@/icons/facebook/facebook.component';
+import AppleIcon from '@/icons/apple/apple.component';
+import GoogleIcon from '@/icons/google/google.component';
 
 const Login: React.FC = () => {
+    const match = useMediaQuery("(min-width:900px)")
     return (
         <Container maxWidth="xl">
             <Grid container spacing={2} height="80vh" alignContent={"center"} minHeight="100vh">
-                <Grid item xl={6} lg={6} md={6} display="flex" justifyContent={"center"} alignItems="center">
-                    <Box style={{ width: "100%"}}>
+                <Grid item xs={12} xl={6} lg={6} md={6} display="flex" justifyContent={"center"} alignItems="center">
+                    <Box style={{ width: "100%" }}>
                         <Box style={{ position: "relative" }}>
                             <Image src={LogoPic} alt="logo" priority />
                         </Box>
                         {/* login form container */}
-                        <Box style={{ width: "80%", height: "70%", marginTop: "5%" }}>
+                        <Box width={match ? "80%" : "100%"} style={{ height: "70%", marginTop: "5%" }}>
                             {/* the title of form */}
                             <Typography variant="body1" fontSize={"40px"} fontFamily={"tradegothic2"}>
                                 Login
@@ -71,13 +75,58 @@ const Login: React.FC = () => {
                                 <Box display={"flex"} justifyContent="center" sx={{ transform: "translateY(-10px)", fontFamily: "Monteserrat", fontSize: "14px" }}>
                                     <div style={{ backgroundColor: "white" }}><span style={{ opacity: "0.5" }}>Or login with</span></div>
                                 </Box>
+                                <Box display={"flex"} justifyContent="space-between" marginTop={"1.5rem"}>
+                                    <Box
+                                        style={{ cursor: "pointer" }}
+                                        width="170px"
+                                        border={"1px solid #8DD3BB"}
+                                        padding="16px 24px"
+                                        display={"flex"}
+                                        justifyContent="center"
+                                        alignItems={"center"}
+                                        borderRadius="4px"
+                                        boxSizing={"border-box"}
+                                        margin="0 10px"
+                                    >
+                                        <FacebookIcon />
+                                    </Box>
+                                    <Box
+                                        style={{ cursor: "pointer" }}
+                                        width="170px"
+                                        border={"1px solid #8DD3BB"}
+                                        padding="16px 24px"
+                                        display={"flex"}
+                                        justifyContent="center"
+                                        alignItems={"center"}
+                                        borderRadius="4px"
+                                        boxSizing={"border-box"}
+                                        margin="0 10px"
+                                    >
+                                        <GoogleIcon />
+                                    </Box>
+                                    <Box
+                                        style={{ cursor: "pointer" }}
+                                        width="170px"
+                                        border={"1px solid #8DD3BB"}
+                                        padding="16px 24px"
+                                        display={"flex"}
+                                        justifyContent="center"
+                                        alignItems={"center"}
+                                        borderRadius="4px"
+                                        boxSizing={"border-box"}
+                                        margin="0 10px"
+                                    >
+                                        <AppleIcon />
+                                    </Box>
+                                </Box>
                             </Box>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xl={6} lg={6} md={6} style={{ position: "relative", height: "90%" }}>
+                {match && <Grid item xs={12} xl={6} lg={6} md={6} style={{ position: "relative", height: "90%" }}>
                     <Box style={{ backgroundColor: "blue" }}><Image fill src={AirplanePic} alt="airplane" priority /></Box>
-                </Grid>
+                </Grid>}
+
             </Grid>
         </Container>
 
