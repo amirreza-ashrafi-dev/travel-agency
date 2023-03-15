@@ -1,5 +1,5 @@
 import { Box, } from '@mui/material';
-import { socialBoxStyle } from './styles-object';
+import { socialBoxStyle } from '../auth-forms-styles/styles';
 import FacebookIcon from '@/icons/facebook/facebook.component';
 import AppleIcon from '@/icons/apple/apple.component';
 import GoogleIcon from '@/icons/google/google.component';

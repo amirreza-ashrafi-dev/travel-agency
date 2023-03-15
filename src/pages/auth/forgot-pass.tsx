@@ -2,7 +2,7 @@ import { Grid, Container, Box, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import AirplanePic from '@/static-pictures/Rectangle 20.svg'
 import LogoPic from '@/static-pictures/logo.svg';
-import AuthForm from '@/components/auth-forms/login-form/authform.component';
+import ForgotPassForm from '@/components/auth-forms/forgotpass-form/forgotpass.component';
 
 
 const Login: React.FC = () => {
@@ -16,7 +16,7 @@ const Login: React.FC = () => {
                             <Image src={LogoPic} alt="logo" priority />
                         </Box>
                         {/* login form container */}
-                        <AuthForm />
+                        <ForgotPassForm />
                     </Box>
                 </Grid>
                 {match && <Grid item xs={12} xl={6} lg={6} md={6} style={{ position: "relative", height: "90%" }}>
