@@ -2,10 +2,10 @@ import { Grid, Container, Box, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import AirplanePic from '@/static-pictures/Rectangle 20.svg'
 import LogoPic from '@/static-pictures/logo.svg';
-import ForgotPassForm from '@/components/auth-forms/forgotpass-form/forgotpass.component';
+import NewPass from '@/components/auth-forms/new-pass-form/new-pass.component';
 
 
-const ForgotPass: React.FC = () => {
+const NewPassword: React.FC = () => {
     const match = useMediaQuery("(min-width:900px)");
     return (
         <Container maxWidth="xl">
@@ -15,8 +15,8 @@ const ForgotPass: React.FC = () => {
                         <Box style={{ position: "relative" }}>
                             <Image src={LogoPic} alt="logo" priority />
                         </Box>
-                        {/* forgot pass  form container */}
-                        <ForgotPassForm />
+                        {/* new pass form container */}
+                        <NewPass />
                     </Box>
                 </Grid>
                 {match && <Grid item xs={12} xl={6} lg={6} md={6} style={{ position: "relative", height: "90%" }}>
@@ -29,4 +29,4 @@ const ForgotPass: React.FC = () => {
     )
 };
 
-export default ForgotPass;
+export default NewPassword;
