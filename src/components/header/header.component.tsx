@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import dynamic from "next/dynamic";
 
@@ -11,10 +11,18 @@ const SmallSizeHeader = dynamic(() => import("./small-size"), {
 
 
 const Header: React.FC<{}> = () => {
+    const [show, setShow] = useState(true);
     const match = useMediaQuery("(min-width:750px)");
+
+    // this useEffect its not useless the reason i have to use useeffect 
+    // is because this issue (https://github.com/mui/material-ui/issues/21142) which comes from useMediaQuery()
+    // in server side rendered applications
+    // useEffect(() => {
+    //     setShow(true)
+    // }, [])
     return (
         <>
-            {!match ? <SmallSizeHeader /> : <BigSizeHeader />}
+            {show && (!match ? <SmallSizeHeader /> : <BigSizeHeader />)}
         </>
     )
 }
