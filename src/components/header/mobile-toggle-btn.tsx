@@ -1,12 +1,9 @@
 import React from "react";
 import { MenuLine } from './styles';
+import {MobileToggleBtnProps} from './types'
 
-interface props {
-    Click: () => void,
-    Show: boolean
-}
 
-const MobileToggleBtn: React.FC<props> = ({ Click, Show }) => {
+const MobileToggleBtn: React.FC<MobileToggleBtnProps> = ({ Click, Show }) => {
     return (
         <div style={{ display: "flex", flexDirection: "column", cursor: "pointer" }} onClick={Click}>
             <MenuLine Show={Show} transform='translate(0px, 2px) rotate(50deg)' />

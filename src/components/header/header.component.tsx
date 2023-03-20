@@ -26,7 +26,9 @@ const Header: React.FC<{}> = () => {
                     match
                         ?
                         <Suspense fallback={<div>loading</div>}>
-                            <BigSizeHeader />
+                            <>
+                                <BigSizeHeader />
+                            </>
                         </Suspense>
                         :
                         <Suspense
