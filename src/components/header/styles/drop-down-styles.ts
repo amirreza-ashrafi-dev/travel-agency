@@ -1,4 +1,4 @@
-import type {MotionStyle} from 'framer-motion';
+import type { MotionStyle } from 'framer-motion';
 
 export const motionDivStyles: MotionStyle = {
     position: "absolute",

@@ -12,7 +12,7 @@ const Header: React.FC<{}> = () => {
 
 
     // this useEffect its not useless the reason i have to use useeffect 
-    // is because this issue (https://github.com/mui/material-ui/issues/21142) which comes from useMediaQuery()
+    // is because of this issue (https://github.com/mui/material-ui/issues/21142) which comes from useMediaQuery()
     // in server side rendered applications
     useEffect(() => {
         setShow(true)
