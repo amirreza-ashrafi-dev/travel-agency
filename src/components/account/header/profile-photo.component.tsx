@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import Image from 'next/image';
-import ProfilePic from '@/static-pictures/profile.PNG';
+import ProfilePic from '@/static-pictures/profile-photo.png';
 import { Container, ImageStyles, ProfileImageWrapper, ProfileDetail, ProfileDetailWrapper } from './styles/profile-photo';
 
 const ProfilePhoto: FC = () => {
