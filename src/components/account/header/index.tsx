@@ -5,7 +5,7 @@ import Image from 'next/image';
 import ProfilePhoto from './profile-photo.component';
 
 
-const AccountHeader: React.FC<{}> = () => {
+export const AccountHeader: React.FC<{}> = () => {
     return (
         <Cover>
             <Image placeholder="blur" fill src={ConverImageSrc} alt="cover-image" />
@@ -14,5 +14,3 @@ const AccountHeader: React.FC<{}> = () => {
         </Cover>
     )
 }
-
-export default AccountHeader;

@@ -1,3 +1,7 @@
+html {
+    background-color: #f9f9f9;
+}
+
 @font-face {
     font-family: 'Monteserrat';
     src: url('../fonts/montserrat/Montserrat-Medium.ttf');

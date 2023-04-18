@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import Image from 'next/image';
 import ProfilePic from '@/static-pictures/profile-photo.png';
-import { Container, ImageStyles, ProfileImageWrapper, ProfileDetail, ProfileDetailWrapper } from './styles/profile-photo';
+import { Container, ImageStyles, ProfileImageWrapper, ProfileDetail, ProfileDetailWrapper } from './styles';
 
 const ProfilePhoto: FC = () => {
     return (
