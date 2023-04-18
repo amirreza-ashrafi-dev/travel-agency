@@ -1,5 +1,5 @@
 ## Travel agency repo
-![Airplane bound!](/src/static-pictures/Rectangle 3.png. "Airplane bound")
+![Airplane bound!](/src/static-pictures/Rectangle%203.png "Airplane bound")
 
 ### Technologies used : 
 1) Nextjs
