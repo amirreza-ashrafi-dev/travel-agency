@@ -1,7 +1,7 @@
 ## Travel agency
 ![Airplane bound!](/src/static-pictures/Rectangle%203.png "Airplane bound")
 
-### Technologies used : 
+### Technologies : 
 1) Nextjs
 2) Typescript
 3) Material ui 
