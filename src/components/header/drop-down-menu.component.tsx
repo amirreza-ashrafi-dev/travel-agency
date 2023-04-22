@@ -6,7 +6,7 @@ import ChevronIcon from '@/icons/chevron/chevron.component';
 import { motion } from 'framer-motion';
 import { motionDivStyles } from './styles'
 import { ListData } from './data'
-import {DropDown} from './types'
+import { DropDown } from './types'
 
 
 const DropDownMenu: React.FC<DropDown> = ({ mouseEnter, mouseLeave }) => {
@@ -30,8 +30,8 @@ const DropDownMenu: React.FC<DropDown> = ({ mouseEnter, mouseLeave }) => {
             </Box>
             {/* lists */}
             {
-                Object.keys(ListData).map((list) => (
-                    <Box display={"flex"} width="80%" margin={"20px auto"} paddingBottom="20px" flexDirection="column" borderBottom="2px solid #eceded">
+                Object.keys(ListData).map((list, idx) => (
+                    <Box key={idx} display={"flex"} width="80%" margin={"20px auto"} paddingBottom="20px" flexDirection="column" borderBottom="2px solid #eceded">
                         {ListData[list].map(list => (
                             <Box display={"flex"} marginBottom="10px" alignItems={"center"} justifyContent="space-between">
                                 <Box display={"flex"}>
