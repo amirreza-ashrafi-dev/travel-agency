@@ -4,7 +4,7 @@ import { Button, ButtonProps } from './styles';
 interface RegularButtonProps extends ButtonProps {
     text: string,
     onClick?: (e: React.SyntheticEvent<HTMLButtonElement>) => void,
-    icon?: ReactNode
+    icon?: ReactNode,
 }
 
 export const RegularButton: React.FC<RegularButtonProps> = (
@@ -16,7 +16,10 @@ export const RegularButton: React.FC<RegularButtonProps> = (
         border,
         onClick,
         icon,
-        marginright
+        left,
+        right,
+        top,
+        bottom
     }
 ) => {
     return (
@@ -26,7 +29,10 @@ export const RegularButton: React.FC<RegularButtonProps> = (
             height={height}
             border={border}
             onClick={onClick}
-            marginright={marginright}
+            left={left}
+            right={right}
+            top={top}
+            bottom={bottom}
         >
             {text}
             {icon}

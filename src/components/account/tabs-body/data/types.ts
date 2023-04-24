@@ -1,5 +1,5 @@
 export interface rowsType {
     fieldName: string,
     fieldData: string,
-    buttons: React.ReactElement[]
+    buttons: { Element: React.ReactElement, text: string }[]
 }

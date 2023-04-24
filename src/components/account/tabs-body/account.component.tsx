@@ -37,20 +37,23 @@ export const AccountTab: React.FC = () => {
                                     {row.fieldData}
                                 </Span>
                             </Left>
-                            {
-                                row.buttons.map((button, idx) => (
-                                    <RegularButton
-                                        key={idx}
-                                        text='change'
-                                        background='#FFFFFF'
-                                        border='1px solid #8DD3BB'
-                                        width="140px"
-                                        height="48px"
-                                        onClick={(e) => console.log("click")}
-                                        icon={<div style={{ marginRight: "5px" }}>{button}</div>}
-                                    />
-                                ))
-                            }
+                            <div style={{ display: "flex" }}>
+                                {
+                                    row.buttons.map(({ Element, text }, idx) => (
+                                        <RegularButton
+                                            key={idx}
+                                            text={text}
+                                            background='#FFFFFF'
+                                            border='1px solid #8DD3BB'
+                                            width={row.fieldName === "Email" ? "180px" : "140px"}
+                                            height="48px"
+                                            onClick={(e) => console.log("click")}
+                                            left='10px'
+                                            icon={<div style={{ marginRight: "5px" }}>{Element}</div>}
+                                        />
+                                    ))
+                                }
+                            </div>
                         </Row>
                     ))
                 }
