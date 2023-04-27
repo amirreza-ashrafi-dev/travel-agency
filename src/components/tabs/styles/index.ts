@@ -1,4 +1,5 @@
 import { styled } from '@mui/material';
+import { responsveStrinGenerator } from '@/lib';
 
 const TabContainer = styled("div")(() => ({
     width: "100%",
@@ -18,17 +19,20 @@ const TabHeader = styled("div")(({ border }: { border?: boolean }) => ({
     fontSize: "16px",
     lineHeight: "20px",
     padding: "5px 25px",
-    cursor: "pointer"
+    cursor: "pointer",
 }));
 
 const TabHeaderContainer = styled("div")(() => ({
     display: "flex",
-    // justifyContent: "space-between",
     padding: "10px 0",
     boxShadow: "0px 4px 16px rgba(17, 34, 17, 0.05)",
     borderRadius: "12px",
     height: "45px",
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF",
+    ...responsveStrinGenerator(750, {
+        flexDirection: "column",
+        height: "auto"
+    })
 }));
 
 

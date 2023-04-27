@@ -1,4 +1,5 @@
-import {styled} from '@mui/material';
+import { styled } from '@mui/material';
+import { responsveStrinGenerator } from '@/lib';
 
 export const TabWrapper = styled("div")(() => ({
     marginTop: "2.3rem",
@@ -16,12 +17,30 @@ export const TabContent = styled("div")(() => ({
 export const Row = styled("div")(() => ({
     display: "flex",
     justifyContent: "space-between",
-    marginBottom: "1.5rem"
+    marginBottom: "1.5rem",
+    ...responsveStrinGenerator(775, {
+        flexDirection: "column",
+        alignItems: "center"
+    })
 }));
 
 export const Left = styled("div")(() => ({
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+}));
+
+export const ButtonContainer = styled("div")(() => ({
+    display: "flex",
+    ...responsveStrinGenerator(775, {
+        marginTop: "20px",
+        flexDirection: "column"
+    })
+}));
+
+export const ButtonWrapper = styled("div")(() => ({
+    ...responsveStrinGenerator(775, {
+        marginBottom: "10px",
+    })
 }));
 
 export const Span = styled("span")(({ fontSize, fontWeight, lineHeight, color, opacity, marginBottom }: { [key: string]: string }) => ({
@@ -32,5 +51,8 @@ export const Span = styled("span")(({ fontSize, fontWeight, lineHeight, color, o
     lineHeight: `${lineHeight}px`,
     color: `${color}`,
     opacity: `${opacity ? opacity : 1}`,
-    marginBottom: marginBottom ? marginBottom : 0
+    marginBottom: marginBottom ? marginBottom : 0,
+    ...responsveStrinGenerator(775, {
+        textAlign: "center"
+    })
 }))

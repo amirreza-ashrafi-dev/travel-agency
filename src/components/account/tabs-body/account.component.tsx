@@ -1,4 +1,4 @@
-import { TabWrapper, Row, Left, TabContent, Span } from './styles';
+import { TabWrapper, Row, Left, TabContent, Span, ButtonContainer, ButtonWrapper } from './styles';
 import { RegularButton } from '@/components/buttons';
 import { Typography } from '@mui/material';
 import { rowsData } from './data/data';
@@ -37,23 +37,25 @@ export const AccountTab: React.FC = () => {
                                     {row.fieldData}
                                 </Span>
                             </Left>
-                            <div style={{ display: "flex" }}>
+                            <ButtonContainer>
                                 {
                                     row.buttons.map(({ Element, text }, idx) => (
-                                        <RegularButton
-                                            key={idx}
-                                            text={text}
-                                            background='#FFFFFF'
-                                            border='1px solid #8DD3BB'
-                                            width={row.fieldName === "Email" ? "180px" : "140px"}
-                                            height="48px"
-                                            onClick={(e) => console.log("click")}
-                                            left='10px'
-                                            icon={<div style={{ marginRight: "5px" }}>{Element}</div>}
-                                        />
+                                        <ButtonWrapper>
+                                            <RegularButton
+                                                key={idx}
+                                                text={text}
+                                                background='#FFFFFF'
+                                                border='1px solid #8DD3BB'
+                                                width={row.fieldName === "Email" ? "180px" : "140px"}
+                                                height="48px"
+                                                onClick={(e) => console.log("click")}
+                                                left='10px'
+                                                icon={<div style={{ marginRight: "5px" }}>{Element}</div>}
+                                            />
+                                        </ButtonWrapper>
                                     ))
                                 }
-                            </div>
+                            </ButtonContainer>
                         </Row>
                     ))
                 }

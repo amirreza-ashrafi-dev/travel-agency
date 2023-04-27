@@ -1,0 +1,1 @@
+export { responsveStrinGenerator } from './responsive-text-tenerator'

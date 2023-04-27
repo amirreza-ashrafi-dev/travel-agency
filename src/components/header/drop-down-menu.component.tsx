@@ -32,8 +32,8 @@ const DropDownMenu: React.FC<DropDown> = ({ mouseEnter, mouseLeave }) => {
             {
                 Object.keys(ListData).map((list, idx) => (
                     <Box key={idx} display={"flex"} width="80%" margin={"20px auto"} paddingBottom="20px" flexDirection="column" borderBottom="2px solid #eceded">
-                        {ListData[list].map(list => (
-                            <Box display={"flex"} marginBottom="10px" alignItems={"center"} justifyContent="space-between">
+                        {ListData[list].map((list,idx) => (
+                            <Box key={idx} display={"flex"} marginBottom="10px" alignItems={"center"} justifyContent="space-between">
                                 <Box display={"flex"}>
                                     <Box marginRight={"7px"}>{<list.icon />}</Box>
                                     <Typography variant="body2" fontSize={"14px"} fontFamily="Monteserrat">{list.name}</Typography>
