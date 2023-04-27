@@ -32,7 +32,7 @@ export const Left = styled("div")(() => ({
 export const ButtonContainer = styled("div")(() => ({
     display: "flex",
     ...responsveStrinGenerator(775, {
-        marginTop: "20px",
+        marginTop: "13px",
         flexDirection: "column"
     })
 }));
