@@ -16,7 +16,7 @@ const Account: React.FC<{}> = () => {
             <Tab
                 header={TabList}
                 body={
-                    [AccountTab, HistoryTab, PaymentTab]
+                    [AccountTab, AccountTab, PaymentTab]
                 }
             />
         </Container>

@@ -40,7 +40,7 @@ export const AccountTab: React.FC = () => {
                             <ButtonContainer>
                                 {
                                     row.buttons.map(({ Element, text }, idx) => (
-                                        <ButtonWrapper>
+                                        <ButtonWrapper key={idx}>
                                             <RegularButton
                                                 key={idx}
                                                 text={text}
